@@ -1,0 +1,60 @@
+@import 'assets/scss/themes/index';
+@import url('https://fonts.cdnfonts.com/css/europa-title');
+@import url('https://fonts.cdnfonts.com/css/eurostile-extended');
+//@import url('https://fonts.cdnfonts.com/css/europa');
+
+body {
+  font-family: 'Eurostile Extended', sans-serif !important;
+  margin: 0 !important;
+  background: var(--white);
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Europa Title', sans-serif;
+  }
+
+  .body-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: var(--white);
+    color: var(--black);
+    border-radius: var(--borderRadius);
+    border: solid 1px var(--disabled);
+    box-shadow: 0 3px 10px -8px var(--shadow);
+    width: 100%;
+
+    .body-services-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3.3rem 2.3rem;
+      h4 {
+        margin-bottom: 2rem;
+      }
+      p {
+        margin-top: 0;
+        text-align: center;
+        font-weight: lighter;
+      }
+      i {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 60px;
+        background: var(--secondary);
+        border-radius: 50%;
+      }
+
+      & {
+        border-right: solid 1px var(--disabled);
+      }
+      &.last{
+        border-right: none;
+      }
+    }
+  }
+
+}

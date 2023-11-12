@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="logo">
+    <img src="assets/img/mf-avatar.svg" alt="logo">
+  </div>
+  <div class="socials">
+    <a [href]="social.link"
+       target="_blank"
+       rel="noopener noreferrer"
+       *ngFor="let social of socialNetworks"
+    >
+      <i [class]="social.icon"></i>
+    </a>
+  </div>
+  <div class="copy">
+    <p>Concue a la main par Moi <i class="fa fa-smile-o"></i></p>
+  </div>
+  <div class="copy">
+    <p class="made_with">
+      Fait avec <i class="fa-brands fa-angular fa-xl"></i>
+      <i class="fa-brands fa-node fa-xl"></i>
+    </p>
+  </div>
+</div>

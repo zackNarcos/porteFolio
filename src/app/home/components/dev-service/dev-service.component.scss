@@ -1,0 +1,25 @@
+.langages, .langages_body {
+  text-align: center;
+  h5 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+  }
+  .langage {
+
+  };
+}
+
+.framwork, .framwork_body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  h5 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+  }
+  justify-content: center;
+  align-items: center;
+  .framwork {
+    margin-bottom: 0.5rem;
+  }
+}
