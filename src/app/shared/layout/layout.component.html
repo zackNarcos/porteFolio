@@ -1,6 +1,8 @@
 <div class="layout">
-  <div class="header">
-    <app-header></app-header>
+  <div class="header"
+        [ngClass]="{'displayed': isDisplayed}"
+  >
+    <app-header (isDisplayed)="isDisplayed = $event"></app-header>
   </div>
   <div class="content">
     <router-outlet></router-outlet>

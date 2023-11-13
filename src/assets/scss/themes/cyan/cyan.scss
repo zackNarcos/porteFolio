@@ -1,21 +1,17 @@
-@import 'dark/dark';
-@import 'light/light';
-@import 'cyan/cyan';
-
-:root {
+html[data-theme='cyan'] {
   // Colors
-  --primary: #F53FA1;
-  --secondary: #00b2ff;
+  --primary: #004D5F;
+  --secondary: #00CDCB;
   --white: #fff;
   --black: #0F151A;
   --disabled: var(--primary-2);
 
-  --primary-1: #4C1432;
-  --primary-2: #6C1C42;
-  --primary-3: #8C244F;
-  --primary-4: #AC2C5C;
-  --primary-5: #CC3469;
-  --primary-6: #EC3C76;
+  --primary-1: #002D3F;
+  --primary-2: #004D5F;
+  --primary-3: #006D7A;
+  --primary-4: #008D95;
+  --primary-5: #00ADAF;
+  --primary-6: #00CDCB;
 
 
   --secondary-1: #004D5F;
@@ -39,5 +35,4 @@
 
   // Shadows
   --shadow: var(--primary-3);
-
 }

@@ -1,4 +1,4 @@
-import {Component, HostListener, Renderer2} from '@angular/core';
+import {Component, EventEmitter, HostListener, Output, Renderer2} from '@angular/core';
 import {ButtonComponent} from "../controls/button/button.component";
 
 @Component({
@@ -12,23 +12,31 @@ import {ButtonComponent} from "../controls/button/button.component";
 })
 export class HeaderComponent {
   private header!: HTMLElement;
+  @Output() isDisplayed = new EventEmitter<boolean>();
+  isDisplay = false;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2) {
+    this.renderer.setAttribute(document.querySelector('html'), 'data-theme', 'cyan')
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    // Calculer une valeur pour la couleur en fonction de la position de défilement
-    const colorValue = Math.min(scrollPosition / 5, 255);
+    if (scrollPosition > 200) {
+      this.renderer.addClass(this.header, 'displayed');
+      if (this.isDisplay) return
+      this.isDisplay = true;
+      this.isDisplayed.emit(true)
+      //switch to dark theme
 
-    // Utiliser la couleur calculée pour définir le fond de l'en-tête
-    // this.renderer.setStyle(this.header, 'background-color', `rgb(${colorValue}, ${colorValue}, ${colorValue})`);
-    if (colorValue > 10) {
-      this.renderer.setAttribute(document.querySelector('html'), 'data-theme', 'dark');
-      console.log('dark')
-    } else {
-      this.renderer.setAttribute(document.querySelector('html'), 'data-theme', 'light');
+    }
+      // this.renderer.setAttribute(document.querySelector('html'), 'data-theme', 'cyan')
+    if (scrollPosition < 10) {
+      this.renderer.removeClass(this.header, 'displayed');
+      if (!this.isDisplay) return
+      this.isDisplay = false;
+      this.isDisplayed.emit(false)
     }
   }
 
