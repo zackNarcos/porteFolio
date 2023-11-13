@@ -1,7 +1,37 @@
+.dev {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--danger);
+  color: var(--white);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h6 {
+    margin: 0;
+    text-align: center;
+  }
+
+  @media screen {
+    @media (max-width: 768px) {
+      h6:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+
+}
 .layout {
   padding: 0;
   position: relative;
   z-index: 3;
+
 
   .footer, .content {
     padding: 0;

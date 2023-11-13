@@ -5,6 +5,7 @@ html[data-theme='cyan'] {
   --white: #fff;
   --black: #0F151A;
   --disabled: var(--primary-2);
+  --danger: #FF0000;
 
   --primary-1: #002D3F;
   --primary-2: #004D5F;
@@ -22,7 +23,7 @@ html[data-theme='cyan'] {
   --secondary-6: #00EDE6;
 
   //background
-  --background: var(primary-6);
+  --background: #001f28;
   --background-25: opacity(var(--background), 0.25);
   --background-50: opacity(var(--background), 0.5);
   --background-75: opacity(var(--background), 0.75);

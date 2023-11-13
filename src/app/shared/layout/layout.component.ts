@@ -3,6 +3,7 @@ import {RouterOutlet} from "@angular/router";
 import {HeaderComponent} from "../components/header/header.component";
 import {FooterComponent} from "../components/footer/footer.component";
 import {NgClass} from "@angular/common";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @Component({
   selector: 'app-layout',
@@ -13,7 +14,8 @@ import {NgClass} from "@angular/common";
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    NgClass
+    NgClass,
+    MatProgressBarModule,
   ]
 })
 export class LayoutComponent {
