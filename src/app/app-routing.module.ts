@@ -18,8 +18,8 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'home',
-        pathMatch: 'full',
+        redirectTo: '/index.html',
+        // pathMatch: 'full',
       }
     ]
   }
