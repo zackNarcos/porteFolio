@@ -2,3 +2,10 @@
   from = "/*"
   to = "/dist/porte-folio/index.html"
   status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/dist/porte-folio/index.html"
+  status = 200
+
+
